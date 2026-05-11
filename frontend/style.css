@@ -1,0 +1,191 @@
+:root {
+    --bg-color: #111111;
+    --text-primary: #E4E4E4;
+    --text-muted: #888888;
+    --border-color: #2A2A2A;
+    --accent: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.status {
+    color: var(--text-muted);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 4rem 4rem;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 10vw, 12rem);
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-primary);
+}
+
+.subtitle {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Container */
+.container {
+    padding: 0 4rem 6rem;
+}
+
+.loading {
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Job Description Section */
+.jd-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+    .jd-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.jd-header {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.jd-id {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.jd-role {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.jd-company {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Candidate List */
+.jd-candidates {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.candidate {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.candidate:hover {
+    background: #1a1a1a;
+    border-color: #444;
+}
+
+.candidate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.candidate-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.candidate-rank {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.candidate-score {
+    text-align: right;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px; /* Pill shape */
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
